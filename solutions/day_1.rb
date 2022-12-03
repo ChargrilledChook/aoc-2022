@@ -5,9 +5,8 @@ require_relative 'solution'
 
 # https://adventofcode.com/2022/day/1
 class Day1 < Solution
-  def self.solve(elf_count)
-    slices = input.slice_when { |elem| elem == '' }
-
+  def self.solve(elf_count, data = input)
+    slices = data.slice_when { |elem| elem == '' }
     slices.map { |slice| slice.map(&:to_i).sum }.max(elf_count).sum
   end
 

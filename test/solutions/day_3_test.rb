@@ -13,7 +13,7 @@ class Day3Test < MiniTest::Test
       ttgJtRGJQctTZtZT
       CrZsJsPPZsGzwwsLwLmpwMDw
     ]
-    actual = Day3.part_one(input)
+    actual = Day3.solve(input)
     expected = 157
 
     assert_equal expected, actual

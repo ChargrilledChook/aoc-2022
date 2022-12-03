@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require 'minitest/test_task'
 require_relative 'main'
+require 'minitest/test_task'
 
 Minitest::TestTask.create
 

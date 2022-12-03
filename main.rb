@@ -2,6 +2,7 @@
 
 require 'date'
 require 'yaml'
+require 'debug'
 
 require_relative 'helpers/puzzle_input'
 
