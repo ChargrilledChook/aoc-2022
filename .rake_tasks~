@@ -1,3 +1,9 @@
+bootstrap[day]
+default
 fetch[day]
 print[day]
 solve[day]
+test
+test:cmd
+test:isolated
+test:slow
