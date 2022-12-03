@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
+require 'minitest/test_task'
 require_relative 'main'
+
+Minitest::TestTask.create
 
 desc 'Get puzzle input from AOC'
 task :fetch, :day do |_t, args|
