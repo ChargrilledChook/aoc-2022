@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 # Shared utilities for day solutions
-class Solution
-  def self.number
+module SolutionHelper
+  def number
     to_s.gsub('Day', '')
   end
 
-  def self.input
+  def input
     PuzzleInput.to_a(number)
   end
 end

@@ -1,10 +1,12 @@
 # frozen_string_literal: true
 
 require_relative '../helpers/puzzle_input'
-require_relative 'solution'
+require_relative '../helpers/solution_helper'
 
 # https://adventofcode.com/2022/day/2
-class Day2 < Solution
+class Day2
+  extend SolutionHelper
+
   WIN = 6
   DRAW = 3
   LOSS = 0
@@ -38,5 +40,10 @@ class Day2 < Solution
   end
 
   def self.part_two
+    data.map do |pair|
+      them, me = pair.split(' ')
+
+      result_matrix[them][me] + scores[me]
+    end.sum
   end
 end
