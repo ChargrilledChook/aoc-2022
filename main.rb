@@ -6,7 +6,6 @@ require 'yaml'
 require 'debug'
 
 # Helpers
-
 require_relative 'app/helpers/solution_helper'
 require_relative 'app/helpers/puzzle_input'
 require_relative 'app/helpers/file_helper'

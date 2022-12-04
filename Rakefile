@@ -12,7 +12,7 @@ task :fetch, :day do |_t, args|
 end
 
 desc 'Solve the puzzle and save the result'
-task :solve, :day do |_t, args|
+task :solve, [:day] => :print do |_t, args|
   day = args[:day]
   FileHelper.add_solution_yaml(day)
 end

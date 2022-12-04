@@ -12,12 +12,12 @@ class PuzzleInput
     session = YAML.load_file('.config.yml')['session']
     uri = URI(BASE_URI + "#{day}/input")
 
-    File.open("inputs/#{day}.txt", 'w+') do |f|
+    File.open("app/inputs/#{day}.txt", 'w+') do |f|
       f << Net::HTTP.get(uri, { cookie: session })
     end
   end
 
   def self.to_a(day)
-    File.readlines("inputs/#{day}.txt", "\n", chomp: true)
+    File.readlines("app/inputs/#{day}.txt", "\n", chomp: true)
   end
 end
