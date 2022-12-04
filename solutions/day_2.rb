@@ -27,6 +27,14 @@ class Day2
     }
   end
 
+  def self.result_matrix2
+    {
+      'A' => { 'X' => LOSS + 3, 'Y' => DRAW + 1, 'Z' => WIN + 2 },
+      'B' => { 'X' => LOSS + 1, 'Y' => DRAW + 2, 'Z' => WIN + 3 },
+      'C' => { 'X' => LOSS + 2, 'Y' => DRAW + 3, 'Z' => WIN + 1 }
+    }
+  end
+
   def self.solve(data = input)
     data.map do |pair|
       them, me = pair.split(' ')
@@ -39,11 +47,11 @@ class Day2
     solve(...)
   end
 
-  def self.part_two
+  def self.part_two(data = input)
     data.map do |pair|
       them, me = pair.split(' ')
 
-      result_matrix[them][me] + scores[me]
+      result_matrix2[them][me]
     end.sum
   end
 end
