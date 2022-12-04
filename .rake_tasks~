@@ -1,6 +1,6 @@
-bootstrap[day]
 default
 fetch[day]
+generate[day]
 print[day]
 solve[day]
 test

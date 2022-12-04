@@ -9,7 +9,7 @@ class PuzzleInput
   BASE_URI = 'https://adventofcode.com/2022/day/'
 
   def self.fetch(day)
-    session = YAML.load_file('.config/yml')['session']
+    session = YAML.load_file('.config.yml')['session']
     uri = URI(BASE_URI + "#{day}/input")
 
     File.open("inputs/#{day}.txt", 'w+') do |f|

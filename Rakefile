@@ -27,7 +27,7 @@ task :print, :day do |_t, args|
 end
 
 desc 'Bootstrap files for a day'
-task :generate, :day do |_t, args|
+task :generate, [:day] => :fetch do |_t, args|
   day = args[:day]
   FileHelper.run(day)
 end

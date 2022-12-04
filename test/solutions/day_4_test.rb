@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require 'minitest/autorun'
-require_relative '../../solutions/day_4'
+require_relative '../test_helper'
+require_relative '../../app/solutions/day_4'
 
 class Day4Test < MiniTest::Test
   def setup

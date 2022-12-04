@@ -26,7 +26,7 @@ class FileHelper
     init_solution_yaml
   end
 
-  # private
+  private
 
   attr_reader :day
 
@@ -63,7 +63,7 @@ class FileHelper
       # frozen_string_literal: true
 
       require 'minitest/autorun'
-      require_relative '../../solutions/day_#{day}'
+      require_relative '../../app/solutions/day_#{day}'
 
       class Day#{day}Test < MiniTest::Test
         def setup
