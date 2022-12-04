@@ -1,5 +1,6 @@
 require 'yaml'
 
+# Helper for creating skeleton files and saving results
 class FileHelper
   def self.run(...)
     new(...).run
@@ -53,7 +54,7 @@ class FileHelper
       end
     FILE
 
-    File.open("solutions/day_#{day}.rb", 'w+') do |f|
+    File.open("app/solutions/day_#{day}.rb", 'w+') do |f|
       f << solution_file
     end
   end
@@ -99,7 +100,7 @@ class FileHelper
 
   def add_dependency
     File.open('main.rb', 'a+') do |f|
-      f << "require_relative 'solutions/day_#{day}'"
+      f << "require_relative 'app/solutions/day_#{day}'"
     end
   end
 

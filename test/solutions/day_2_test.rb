@@ -3,7 +3,6 @@
 require_relative '../test_helper'
 require_relative '../../app/solutions/day_2'
 
-
 class Day2Test < MiniTest::Test
   def setup
     @input = [
