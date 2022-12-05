@@ -18,32 +18,8 @@ class Day5Test < MiniTest::Test
     ]
   end
 
-  def test_splitting_input_one
-    actual = Day5.split_input(@input).first
-    expected = [
-      '    [D]    ',
-      '[N] [C]    ',
-      '[Z] [M] [P]',
-      ' 1   2   3 '
-    ]
-
-    assert_equal expected, actual
-  end
-
-  def test_splitting_input_two
-    actual = Day5.split_input(@input).last
-    expected = [
-      'move 1 from 2 to 1',
-      'move 3 from 1 to 3',
-      'move 2 from 2 to 1',
-      'move 1 from 1 to 2'
-    ]
-
-    assert_equal expected, actual
-  end
-
-  def test_converting_input_to_stack
-    actual = Day5.convert_to_stack(@input)
+  def test_splitting_input_crates
+    actual =  Day5.split_input(@input).first
     expected = [
       %w[N Z],
       %w[D C M],
@@ -53,8 +29,8 @@ class Day5Test < MiniTest::Test
     assert_equal expected, actual
   end
 
-  def test_converting_input_to_instructions
-    actual = Day5.convert_to_instructions(@input)
+  def test_splitting_input_instructions
+    actual = Day5.split_input(@input).last
     expected = [%w[1 2 1], %w[3 1 3], %w[2 2 1], %w[1 1 2]]
 
     assert_equal expected, actual
